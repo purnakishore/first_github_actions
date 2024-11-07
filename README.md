@@ -1,0 +1,1 @@
+### Python Cron-Job (Like ETL script Collect data from weather API (open meto), Done some transformations, Load it on cloud Database Runs every 1Min, Learning Purpose)
