@@ -11,7 +11,7 @@ jobs:
         steps:
 
             - name: check out repo
-              uses: actions/checkout@4  # check out the repository content to github runner
+              uses: actions/checkout@3  # check out the repository content to github runner
 
             - name: setup python
               uses: actions/setup-python@v4
