@@ -32,6 +32,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Check if connection string is set
+        run: |
+          if [ -z "$connection_string" ]; then
+            echo "Connection string is not set!"
+            exit 1
+          else
+            echo "Connection string is set."
+          fi
+        
+        env:
+          connection_string: ${{ secrets.CONNECTION_STRING }}
+
       - name: execute py script 
       # run app.py
         env:
