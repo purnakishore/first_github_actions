@@ -11,7 +11,7 @@ jobs:
         steps:
 
             - name: check out repo
-              uses: github.com/actions/checkout@3  # check out the repository content to github runner
+              uses: actions/checkout@4  # check out the repository content to github runner
 
             - name: setup python
               uses: actions/setup-python@v4
@@ -26,6 +26,7 @@ jobs:
             - name: execute py script # run app.py
               env:
                 connection_string: ${{secrets.CONNECTION_STRING}}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 ACTIONS_STEP_DEBUG: true
               run: python app.py
 
