@@ -3,6 +3,7 @@ import os
 import pymongo
 from dotenv import load_dotenv
 from pymongo import MongoClient
+import certifi
 
 load_dotenv()
 
@@ -23,7 +24,7 @@ def load_weather_data(transformed_data):
         return
     
     try:
-        client = MongoClient(connection_string)
+        client = MongoClient(connection_string,tlsCAFile=certifi.where())
 
         print("MongoDB client created successfully")
 
