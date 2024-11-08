@@ -2,7 +2,8 @@ name: python_cron_job
 
 on:
     schedule:
-        - cron: '*/2 * * * *'  # this is for every two hours '*/2 * * * *' for every two minutes; refer "crontab.guru"
+        - cron: '* */2 * * *'  # this is for every two hours '*/2 * * * *' for every two minutes; refer "crontab.guru"
+    workflow_dispatch:   # This allows manual triggering
 
 jobs:
     build:
