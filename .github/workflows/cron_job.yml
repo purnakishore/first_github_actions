@@ -11,7 +11,7 @@ jobs:
         steps:
 
             - name: check out repo
-              uses: actions/checkout@<SHA>  # check out the repository content to github runner
+              uses: actions/checkout@<full_SHA>  # check out the repository content to github runner
               
             - name: Test connection 
               run: curl -I https://github.com
